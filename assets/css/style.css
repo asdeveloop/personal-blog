@@ -233,3 +233,56 @@ header .btn-group {
 .theme-btn-mobile ion-icon {
   display: none;
 }
+
+.theme-btn-mobile.light .sun,
+.theme-btn-mobile.dark .moon {
+  display: block;
+}
+
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  background: var(--background-primary);
+  padding: 70px 20px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  transform: translateX(100%);
+  visibility: hidden;
+  transition: .5s cubic-bezier(1, 0, 0.3, 0.7);
+  z-index: 10;
+}
+
+.mobile-nav.active {
+  transform: translate(0);
+  visibility: visible;
+}
+
+.nav-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.mobile-nav .wrapper {
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--action-primary);
+}
+
+.mobile-nav .nav-title {
+  margin-bottom: 1rem;
+}
+
+.mobile-nav .nav-item {
+  margin-bottom: 0.5rem;
+}
+
+.mobile-nav .nav-link {
+  font-size: var(--fs-3);
+  color: var(--foreground-secondary);
+  transition: all 0.2s;
+}
+
+.mobile-nav .nav-link:hover {
+  color: var(--accent);
+}
